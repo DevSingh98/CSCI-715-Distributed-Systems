@@ -1,0 +1,13 @@
+How to run these programs for Homework #1
+
+Question1:
+	Compile: g++ Homework1_Question1.cpp -o Homework1_Question1
+	Run: ./Homework1_Question1
+
+Question2a:
+        Compile: g++ Homework1_Question2a.cpp -o Homework1_Question2a
+        Run: ./Homework1_Question2a
+
+Question2b:
+        Compile: g++ Homework1_Question2b.cpp -o Homework1_Question2b
+        Run: ./Homework1_Question2b
