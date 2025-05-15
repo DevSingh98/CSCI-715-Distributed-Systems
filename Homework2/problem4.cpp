@@ -67,11 +67,14 @@ void kmeans(vector<Point>& points, int K, int max_iters=100) {
 int main() {
     ifstream infile("points_to_cluster.txt");
     vector<Point> points;
-    double x, y;
+    string line;
 
-    //read input points from file
-    while (infile >> x >> y) {
-        points.push_back({x, y, -1}); //initialize with unassigned cluster
+    // Read input points from file (comma-separated)
+    while (getline(infile, line)) {
+        double x, y;
+        if (sscanf(line.c_str(), "%lf,%lf", &x, &y) == 2) {
+                points.push_back({x, y, -1});
+        }
     }
 
     int K;
