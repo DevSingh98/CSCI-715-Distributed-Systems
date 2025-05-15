@@ -2,8 +2,9 @@
 #include <fstream>
 #include <vector>
 #include <omp.h>
+using namespace std;
 
-bool is_sorted_parallel(const std::vector<int>& arr, int start, int end) {
+bool is_sorted_parallel(const vector<int>& arr, int start, int end) {
     if (start >= end) return true;
 
     int mid = (start + end) / 2;
@@ -23,8 +24,8 @@ bool is_sorted_parallel(const std::vector<int>& arr, int start, int end) {
 }
 
 int main() {
-    std::ifstream infile("prob3input.dat");
-    std::vector<int> arr;
+    ifstream infile("prob3input.dat");
+    vector<int> arr;
     int num;
 
     while (infile >> num) {
@@ -38,8 +39,11 @@ int main() {
         sorted = is_sorted_parallel(arr, 0, arr.size()-1);
     }
 
-    if (sorted) std::cout << "Sorted\n";
-    else std::cout << "Not Sorted\n";
+    if (sorted) {
+        cout << "Sorted\n";
+    } else {
+        cout << "Not Sorted\n";
+    }
 
     return 0;
 }
